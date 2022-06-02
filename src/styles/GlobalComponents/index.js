@@ -199,7 +199,7 @@ export const ButtonBack = styled.div`
   }
 `
 
-export const ButtonFront = styled.button`
+export const ButtonFront = styled.a`
   border: none;
   border-radius: 50px;
   color: #fff;

@@ -31,7 +31,7 @@ export const List = styled.ul`
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 65px;
   margin: 3rem 0;
   
   @media ${props => props.theme.breakpoints.lg}{
@@ -53,6 +53,7 @@ export const List = styled.ul`
 export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  pointer-events: none;
 
   @media ${props => props.theme.breakpoints.sm}{
     display: flex;
@@ -85,6 +86,7 @@ export const ListParagraph = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.75);
+  text-align:center;
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: 16px;
@@ -98,7 +100,7 @@ export const ListParagraph = styled.p`
 `
 
 export const ListItem = styled.li`
-  max-width: 320px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
 
@@ -130,4 +132,165 @@ export const ListIcon = styled.img`
     height: 32px;
     margin-bottom: 0px;
   }
+`
+// New Card
+
+export const Shape = styled.div`
+height: 200px;
+width: 200px;
+position: absolute;
+border-radius: 50%;
+overflow: hidden;
+
+&:last-child {
+  background:linear-gradient(to right,#84a0b00d,#00000000);
+  right: -30px;
+  bottom: -80px;
+  z-index: -1;
+}
+
+&:first-child {
+  background: linear-gradient(#655d00,#85750000);
+  left: -80px;
+  top: -80px;
+  z-index: -1;
+}
+
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+export const Shape2 = styled.div`
+height: 200px;
+width: 200px;
+position: absolute;
+border-radius: 50%;
+overflow: hidden;
+
+&:last-child {
+  background:linear-gradient(to right,#84a0b00d,#00000000);
+  right: -30px;
+  bottom: -80px;
+  z-index: -1;
+}
+
+&:first-child {
+  background: linear-gradient(#650000,#85750000);
+  left: -80px;
+  top: -80px;
+  z-index: -1;
+}
+
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+export const Shape3 = styled.div`
+height: 200px;
+width: 200px;
+position: absolute;
+border-radius: 50%;
+overflow: hidden;
+
+&:last-child {
+  background:linear-gradient(to right,#84a0b00d,#00000000);
+  right: -30px;
+  bottom: -80px;
+  z-index: -1;
+}
+
+&:first-child {
+  background:linear-gradient(#005f65,#85750000);
+  left: -80px;
+  top: -80px;
+  z-index: -1;
+}
+
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+
+
+export const CardWrapper = styled.div`
+  cursor:pointer;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  box-sizing: border-box;
+
+  &:hover {
+    border: 2px solid #fff;
+  }
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+export const ImageArea = styled.div`
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:15px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+export const InnerArea = styled.div`
+height: calc(100% - 25px);
+width: calc(100% - 25px);
+border-radius: 50%;
+  
+  @media ${props => props.theme.breakpoints.md}{
+    margin-bottom: 8px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    margin-bottom: 0px;
+  }
+`
+export const Innerimg = styled.img`
+height: 100%;
+width: 100%;
+border-radius: 50%;
+object-fit: cover;
 `
